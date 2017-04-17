@@ -7,7 +7,7 @@
     <ProjectGuid>{832C6B41-84B1-43BE-B38C-9E63E81772A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LBXLoader.Tests</RootNamespace>
+    <RootNamespace>DLS.LBXLoader.Tests</RootNamespace>
     <AssemblyName>LBXLoader.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
