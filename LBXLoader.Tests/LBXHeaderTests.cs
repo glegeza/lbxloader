@@ -18,7 +18,7 @@
             };
 
             [SetUp]
-            private void GenerateTestHeader()
+            public void GenerateTestHeader()
             {
                 _properUnpaddedTestHeader = BuildTestHeader(_testOffsets);
                 _badSignatureTestHeader = BuildTestHeader(_testOffsets, 0, 0, new byte[] { 0x00, 0x00, 0x00, 0x00 });
@@ -26,7 +26,7 @@
             }
 
             [Test]
-            private void FileCountIsProperyRead()
+            public void FileCountIsProperyRead()
             {
                 var header = new LBXHeader(_properUnpaddedTestHeader);
 
@@ -34,7 +34,7 @@
             }
 
             [Test]
-            private void SignatureIsProperlyRead()
+            public void SignatureIsProperlyRead()
             {
                 var header = new LBXHeader(_properUnpaddedTestHeader);
 
@@ -42,7 +42,7 @@
             }
 
             [Test]
-            private void FileOffsetsProperlyRead()
+            public void FileOffsetsProperlyRead()
             {
                 var header = new LBXHeader(_properUnpaddedTestHeader);
 
@@ -50,13 +50,13 @@
             }
 
             [Test]
-            private void InvalidSignatureThrows()
+            public void InvalidSignatureThrows()
             {
                 Assert.That(() => new LBXHeader(_badSignatureTestHeader), Throws.Exception);
             }
 
             [Test]
-            private void ArrayTooShortThrows()
+            public void ArrayTooShortThrows()
             {
                 Assert.That(() => new LBXHeader(_tooShortHeader), Throws.Exception);
             }
