@@ -2,7 +2,6 @@
 {
     using NUnit.Framework;
     using System;
-    using System.Text;
 
     class LBXHeaderTests
     {
@@ -31,14 +30,6 @@
                 var header = new LBXHeader(_properUnpaddedTestHeader);
 
                 Assert.That(header.NumFiles, Is.EqualTo(_testOffsets.Length));
-            }
-
-            [Test]
-            public void SignatureIsProperlyRead()
-            {
-                var header = new LBXHeader(_properUnpaddedTestHeader);
-
-                Assert.That(header.Magic, Is.EqualTo(LBXHeader.MAGIC));
             }
 
             [Test]
