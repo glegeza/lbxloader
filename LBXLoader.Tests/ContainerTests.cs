@@ -8,7 +8,7 @@
     using NUnit;
     using NSubstitute;
 
-    class LBXContainerTests
+    class ContainerTests
     {
 
     }

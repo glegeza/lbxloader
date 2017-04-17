@@ -4,10 +4,10 @@
     using System;
     using System.Text;
 
-    class LBXFileDescriptionTests
+    class FileDescriptionTests
     {
         [TestFixture]
-        class ConstructorTest
+        class Constructor
         {
             [Test]
             public void LoadProperlyFormattedRepeatingCharactersFromBeginningOfArray()
@@ -16,7 +16,7 @@
                 var descStr = new String('T', 23);
                 var fullArray = BuildArray(32, 0, nameStr, descStr);
 
-                var testDesc = new LBXFileDescription(fullArray);
+                var testDesc = new FileDescription(fullArray);
 
                 Assert.That(testDesc.Name, Is.EqualTo(nameStr));
                 Assert.That(testDesc.Description, Is.EqualTo(descStr));
@@ -31,7 +31,7 @@
                 var descStr = new String('T', 23);
                 var fullArray = BuildArray(length, offset, nameStr, descStr);
 
-                var testDesc = new LBXFileDescription(fullArray, offset);
+                var testDesc = new FileDescription(fullArray, offset);
 
                 Assert.That(testDesc.Name, Is.EqualTo(nameStr));
                 Assert.That(testDesc.Description, Is.EqualTo(descStr));
@@ -42,7 +42,7 @@
             {
                 var fullArray = BuildArray(8, 0, "T", "T");
 
-                Assert.That(() => new LBXFileDescription(fullArray), Throws.Exception.TypeOf<ArgumentOutOfRangeException>());
+                Assert.That(() => new FileDescription(fullArray), Throws.Exception.TypeOf<ArgumentOutOfRangeException>());
             }
 
             private Byte[] BuildArray(int size, int offset, string name, string desc)

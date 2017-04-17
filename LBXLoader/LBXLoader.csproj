@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LBXFileDescription.cs" />
-    <Compile Include="LBXHeader.cs" />
-    <Compile Include="LBXContainer.cs" />
+    <Compile Include="FileDescription.cs" />
+    <Compile Include="Header.cs" />
+    <Compile Include="Container.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

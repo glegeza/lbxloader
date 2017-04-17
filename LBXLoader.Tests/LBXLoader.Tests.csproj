@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LBXContainerTests.cs" />
-    <Compile Include="LBXHeaderTests.cs" />
-    <Compile Include="LBXFileDescriptionTests.cs" />
+    <Compile Include="ContainerTests.cs" />
+    <Compile Include="HeaderTests.cs" />
+    <Compile Include="FileDescriptionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

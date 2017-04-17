@@ -3,10 +3,10 @@
     using NUnit.Framework;
     using System;
 
-    class LBXHeaderTests
+    class HeaderTests
     {
         [TestFixture]
-        class ConstructorTest
+        class Constructor
         {
             private byte[] _properUnpaddedTestHeader;
             private byte[] _badSignatureTestHeader;
@@ -27,7 +27,7 @@
             [Test]
             public void FileCountIsProperyRead()
             {
-                var header = new LBXHeader(_properUnpaddedTestHeader);
+                var header = new Header(_properUnpaddedTestHeader);
 
                 Assert.That(header.NumFiles, Is.EqualTo(_testOffsets.Length));
             }
@@ -35,7 +35,7 @@
             [Test]
             public void FileOffsetsProperlyRead()
             {
-                var header = new LBXHeader(_properUnpaddedTestHeader);
+                var header = new Header(_properUnpaddedTestHeader);
 
                 Assert.That(header.FileOffsets, Is.EqualTo(_testOffsets));
             }
@@ -43,13 +43,13 @@
             [Test]
             public void InvalidSignatureThrows()
             {
-                Assert.That(() => new LBXHeader(_badSignatureTestHeader), Throws.Exception);
+                Assert.That(() => new Header(_badSignatureTestHeader), Throws.Exception);
             }
 
             [Test]
             public void ArrayTooShortThrows()
             {
-                Assert.That(() => new LBXHeader(_tooShortHeader), Throws.Exception);
+                Assert.That(() => new Header(_tooShortHeader), Throws.Exception);
             }
 
             private Byte[] BuildTestHeader(UInt32[] fileOffsets, uint leftPadding=0, uint rightPadding=0, byte[] signature=null)
