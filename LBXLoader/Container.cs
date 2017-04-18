@@ -30,6 +30,10 @@
                 if (i < fileDescs.Count)
                 {
                     desc = fileDescs[i];
+                    if (String.IsNullOrWhiteSpace(desc.Name) && String.IsNullOrWhiteSpace(desc.Description))
+                    {
+                        desc = null;
+                    }
                 }
                 var packedFile = new PackedFile(file, header.FileOffsets[i], size, desc);
                 packedFiles.Add(packedFile);
