@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBXLoader", "LBXLoader\LBXL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBXLoader.Tests", "LBXLoader.Tests\LBXLoader.Tests.csproj", "{832C6B41-84B1-43BE-B38C-9E63E81772A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBXLoader.Console", "LBXLoader.Console\LBXLoader.Console.csproj", "{811EAF39-0BD0-444D-A714-895DCD99DE14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{832C6B41-84B1-43BE-B38C-9E63E81772A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{832C6B41-84B1-43BE-B38C-9E63E81772A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{832C6B41-84B1-43BE-B38C-9E63E81772A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{811EAF39-0BD0-444D-A714-895DCD99DE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811EAF39-0BD0-444D-A714-895DCD99DE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811EAF39-0BD0-444D-A714-895DCD99DE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811EAF39-0BD0-444D-A714-895DCD99DE14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
