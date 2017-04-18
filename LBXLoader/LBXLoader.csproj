@@ -43,6 +43,7 @@
     <Compile Include="FileDescription.cs" />
     <Compile Include="Header.cs" />
     <Compile Include="Container.cs" />
+    <Compile Include="PackedFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
